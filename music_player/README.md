@@ -1,2 +1,2 @@
 ## Music Player in Javascript
-### Live Demo : https://Musicplayer.8bytes.repl.co
+### Live Demo : https://phoenix-031.github.io/Web_Projects/music_player/index.html
