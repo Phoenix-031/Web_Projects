@@ -8,7 +8,6 @@ tabcontainer.addEventListener('click', (e) =>{
         e.target.classList.add('active');
 
         const target = e.target.getAttribute("data-target");
-        // console.log(target);
         aboutsection.querySelector(".tab-content.active").classList.remove("active");
         aboutsection.querySelector(target).classList.add("active");
     }
@@ -18,21 +17,18 @@ tabcontainer.addEventListener('click', (e) =>{
 document.addEventListener('click', (e) =>{
     if(e.target.classList.contains("view-project-button")){
         togglePortfolio();
-        // document.querySelector('.portfolio-popup').style.visibility = "visible";
         portfoliodetails(e.target.parentElement);
     }
 })    
 
 
 document.addEventListener('keyup', (e) =>{
-    if(e.target.classList.contains("view-project-button") && e.key == "Escape" && document.querySelector('.portfolio-popup').classList.contains("open")){
+    if(e.key == "Escape" && document.querySelector('.portfolio-popup').classList.contains("open")){
         togglePortfolio();
-        // document.querySelector('.portfolio-popup').style.visibility = "visible";
     }
 })    
 
 function togglePortfolio(){
-    // document.querySelector('.portfolio-popup').style.visibility = "visible";
     document.querySelector('.portfolio-popup').classList.toggle("open");
     document.body.classList.toggle('hide-scrolling');
     document.querySelector(".main").classList.toggle("fade-out");
